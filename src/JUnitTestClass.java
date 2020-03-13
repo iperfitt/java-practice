@@ -5,16 +5,16 @@ import org.junit.jupiter.api.Test;
 
 public class JUnitTestClass {
 
-	public TestClass tc;
+	public BinarySearchRecursion tc;
 
 	@Before
 	public void _setUp() {
-		this.tc = new TestClass();
+		this.tc = new BinarySearchRecursion();
 	}
 
 	@Test
 	void test1() {
-		tc = new TestClass();
+		tc = new BinarySearchRecursion();
 		//assertEquals(false, tc.almostPalindrome("abcdaaa"));
 	}
 
