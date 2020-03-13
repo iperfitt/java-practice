@@ -26,9 +26,4 @@ public class ReverseOddLength {
 		return solution;
 
 	}
-
-	public static void main(String[] args) {
-		String str = "One two three four";
-		System.out.print(reverseOdd(str));
-	}
 }
