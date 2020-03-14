@@ -12,10 +12,5 @@ public class PowerRanger {
 		return count;
 	}
 
-	public static void main(String[] args) {
-
-		powerRanger(1, 1, 5);
-
-	}
 
 }
