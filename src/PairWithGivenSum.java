@@ -1,7 +1,10 @@
+import java.util.Arrays;
+
 //taken from https://www.techiedelight.com/find-pair-with-given-sum-array/
 //Given an unsorted array of integers, find a pair with given sum in it
 public class PairWithGivenSum {
 
+	// O(n^2)
 	public static String pair(int[] arr, int sum) {
 
 		for (int i = 0; i < arr.length; i++) {
@@ -14,6 +17,32 @@ public class PairWithGivenSum {
 		return "Pair not found";
 
 	}
+
+	// O(nlog(n))
+	public static String pair2(int[] arr, int sum) {
+
+		Arrays.parallelSort(arr);
+		int a = 0;
+		int b = arr.length - 1;
+
+		while (arr[a] + arr[b] != sum) {
+			if (arr[a] + arr[b] > sum) {
+				b--;
+			}
+			
+			
+			if (arr[a] + arr[b] < sum) {
+				a++;
+			}
+
+			if (a == b) {
+				return "Pair not found";
+			}
+		}
+		return "Pair found";
+	}
+
+	//
 
 	public static void main(String[] args) {
 		int[] arr = new int[11];
@@ -29,7 +58,8 @@ public class PairWithGivenSum {
 		arr[9] = 9;
 		arr[10] = 0;
 
-		pair(arr, 13);
+		// pair(arr, 13);
+		System.out.println(pair2(arr, 1));
 	}
 
 }
