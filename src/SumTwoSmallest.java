@@ -29,11 +29,4 @@ public class SumTwoSmallest {
 
 	}
 
-	public static void main(String[] args) {
-
-		int[] arr = new int[] { 2, 9, 6, -1 };
-		System.out.print(func(arr));
-
-	}
-
 }
