@@ -19,6 +19,28 @@ public class SortBinaryArray {
 		return sorted;
 	}
 
+	// Utility function to swap elements at two indices in the given array
+	private static void swap(int[] A, int i, int j) {
+		int temp = A[i];
+		A[i] = A[j];
+		A[j] = temp;
+	}
+
+	public static int[] sortBinary2(int[] A) {
+		int pivot = 1;
+		int j = 0;
+
+		// each time we encounter a 0, j is incremented and
+		// 0 is placed before the pivot
+		for (int i = 0; i < A.length; i++) {
+			if (A[i] < pivot) {
+				swap(A, i, j);
+				j++;
+			}
+		}
+		return A;
+	}
+
 	public static void main(String[] args) {
 		int[] arr = new int[10];
 		arr[0] = 1;
@@ -32,7 +54,7 @@ public class SortBinaryArray {
 		arr[8] = 0;
 		arr[9] = 1;
 
-		System.out.println(sortBinary(arr));
+		System.out.println(sortBinary2(arr));
 
 	}
 
