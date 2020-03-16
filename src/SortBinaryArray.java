@@ -26,6 +26,7 @@ public class SortBinaryArray {
 		A[j] = temp;
 	}
 
+	// O(n) using quick
 	public static int[] sortBinary2(int[] A) {
 		int pivot = 1;
 		int j = 0;
